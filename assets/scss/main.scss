@@ -1,0 +1,72 @@
+@use "mixins.scss";
+@use "variables.scss";
+
+@font-face {
+    font-family: digital;
+    src: url(../fonts/digital-7\ \(mono\).ttf);
+}
+
+@font-face {
+    font-family: Monserrat;
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#clock {
+    height: 300px;
+    background-color: #dbe4e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .light {
+        height: 250px;
+        width: 80vw;
+        background-color: #f2f2f2;
+
+        .display {
+            height: 150px;
+            width: 60vw;
+            background-color: #dbdbdb;   
+            border-radius: 10px; 
+            text-align: center;
+
+            .weekdays {
+                font-family: Monserrat;
+                margin: 20px 0;
+                word-spacing: 0.5rem;
+                color: rgb(156, 155, 155);
+
+                span {
+                    color: black;
+                    font-size: 1.1rem;
+                }
+            }
+
+            .time {
+                display: flex;
+                justify-content: center;
+                align-items: baseline;
+                gap: 30px;
+                
+
+                .digits {
+                    font-family: digital;
+                    font-size: 4rem;
+                }    
+
+                .ampm {
+                    font-family: Monserrat;
+                }
+            }
+        }
+    }
+}
+
